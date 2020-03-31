@@ -167,4 +167,12 @@ class DoctorsController extends AppBaseController
 
         return json_encode($doctors);
     }
+
+    public function json(){
+
+        $doctors = Doctors::select(array('id','name','address','cep','city','state'))->get();
+
+
+        return json_encode($doctors);
+    }
 }

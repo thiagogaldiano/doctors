@@ -18,3 +18,8 @@
     <a href="{{ route('schedules.index') }}"><i class="fa fa-edit"></i><span>Agendamentos</span></a>
 </li>
 
+<li>
+    <a href="/doctors-json" target="_blank"><i class="fa fa-edit"></i><span>Doctors JSON</span></a>
+</li>
+
+

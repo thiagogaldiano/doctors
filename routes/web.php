@@ -24,18 +24,25 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->middleware('verified');
+Route::group(['middleware' => ['verified']], function () {
 
-Route::resource('users', 'UsersController');
+    Route::get('/home', 'HomeController@index');
 
-Route::resource('doctors', 'DoctorsController');
+    Route::resource('users', 'UsersController');
 
-Route::resource('specialties', 'SpecialtiesController');
+    Route::resource('doctors', 'DoctorsController');
 
-Route::resource('patients', 'PatientsController');
+    Route::resource('specialties', 'SpecialtiesController');
 
-Route::resource('schedules', 'SchedulesController');
+    Route::resource('patients', 'PatientsController');
 
-Route::get('/patients-ajax','PatientsController@ajax');
+    Route::resource('schedules', 'SchedulesController');
 
-Route::get('/doctors-ajax','DoctorsController@ajax');
+    Route::get('/patients-ajax','PatientsController@ajax');
+
+    Route::get('/doctors-ajax','DoctorsController@ajax');
+});
+
+Route::get('/doctors-json','DoctorsController@json');
+
+

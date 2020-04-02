@@ -65,5 +65,6 @@ class Kernel extends HttpKernel
         'role' => \jeremykenedy\LaravelRoles\App\Http\Middleware\VerifyRole::class,
         'permission' => \jeremykenedy\LaravelRoles\App\Http\Middleware\VerifyPermission::class,
         'level' => \jeremykenedy\LaravelRoles\App\Http\Middleware\VerifyLevel::class,
+        'APIToken' => \App\Http\Middleware\APIToken::class,
     ];
 }

@@ -152,8 +152,14 @@ class UsersController extends AppBaseController
 
         $users->name = $request['name'];
         $users->email = $request['email'];
-        $users->password = Hash::make($request['password']);;
+        if($request['password']){
+            $users->password = Hash::make($request['password']);;
+        }
         $users->save();
+
+        $role = config('roles.models.role')::find($request['roles_id']);
+        $user = config('roles.models.defaultUser')::find($id);
+        $user->syncRoles($role);
 
         //$users = $this->usersRepository->update($request->all(), $id);
 

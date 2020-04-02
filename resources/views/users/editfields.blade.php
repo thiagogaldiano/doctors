@@ -33,7 +33,7 @@
 
 <div class="form-group col-sm-6">
     {!! Form::label('roles_id', 'Categoria:') !!}
-    {!! Form::select('roles_id', $roles, null, ['class' => 'form-control']) !!}
+    {!! Form::select('roles_id', $roles, $role_id, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

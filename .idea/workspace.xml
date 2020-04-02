@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c027de0-4b60-4bd8-90fc-2474c15e53ef" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Models/PermissionRole.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/RoleUser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Roles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/users/editfields.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Doctors.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Doctors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Patients.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Patients.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/doctors/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/doctors/fields.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/patients/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/patients/fields.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ConnectRelationshipsSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ConnectRelationshipsSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/RolesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/fields.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +147,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Models" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -150,6 +155,12 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Models" />
+      <recent name="$PROJECT_DIR$/resources/views/users" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -171,7 +182,7 @@
       <workItem from="1585523848048" duration="6200000" />
       <workItem from="1585769877339" duration="9119000" />
       <workItem from="1585792638019" duration="9856000" />
-      <workItem from="1585826273053" duration="3833000" />
+      <workItem from="1585826273053" duration="10927000" />
     </task>
     <servers />
   </component>

@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 use Flash;
 use Response;
 use Hash;
+use App\Models\Patients;
+use App\Models\Roles;
+use App\Models\RoleUser;
+use App\Models\PermissionRole;
+use App\Models\Users;
 
 class UsersController extends AppBaseController
 {
@@ -43,7 +48,8 @@ class UsersController extends AppBaseController
      */
     public function create()
     {
-        return view('users.create');
+        $roles = Roles::get()->pluck("name","id");
+        return view('users.create')->with('roles',$roles);
     }
 
     /**
@@ -57,9 +63,25 @@ class UsersController extends AppBaseController
     {
         $input = $request->all();
 
-        $users = $this->usersRepository->create($input);
+        $role = config('roles.models.role')::find($input['roles_id']);
+        $permissions_role = PermissionRole::where('role_id',$input['roles_id'])->get();
 
-        Flash::success('Usuário cadastrado com sucesso!');
+        if (Users::where('email', '=', $input['email'])->count() === 0) {
+            $newUser = config('roles.models.defaultUser')::create([
+                'name'     => $input['name'],
+                'email'    => $input['email'],
+                'password' => bcrypt($input['password']),
+            ]);
+
+            $newUser->attachRole($role);
+            foreach($permissions_role as $permission_role){
+                $permission = config('roles.models.permission')::find($permission_role->permission_id);
+                $newUser->attachPermission($permission);
+            }
+
+        }else{
+            Flash::error('E-mail já cadastrado!');
+        }
 
         return redirect(route('users.index'));
     }
@@ -101,7 +123,11 @@ class UsersController extends AppBaseController
             return redirect(route('users.index'));
         }
 
-        return view('users.edit')->with('users', $users);
+        $roleuser = RoleUser::where('user_id',$id)->first();
+
+        $roles = Roles::get()->pluck("name","id");
+
+        return view('users.edit')->with('users', $users)->with('roles',$roles)->with('role_id',$roleuser->role_id);
     }
 
     /**

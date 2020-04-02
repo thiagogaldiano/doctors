@@ -23,5 +23,24 @@ class ConnectRelationshipsSeeder extends Seeder
         foreach ($permissions as $permission) {
             $roleAdmin->attachPermission($permission);
         }
+
+        $roleAdmin = config('roles.models.role')::where('name', '=', 'User')->first();
+        foreach ($permissions as $permission) {
+            $roleAdmin->attachPermission($permission);
+        }
+
+        $permissionsdoctors = config('roles.models.permission')::where('slug','LIKE','%patients')->orwhere('slug','LIKE','%schedules')->get();
+
+        $roleAdmin = config('roles.models.role')::where('name', '=', 'Doctor')->first();
+        foreach ($permissionsdoctors as $permission) {
+            $roleAdmin->attachPermission($permission);
+        }
+
+        $permissionspatients = config('roles.models.permission')::where('slug','LIKE','%doctors')->orwhere('slug','LIKE','%schedules')->get();
+
+        $roleAdmin = config('roles.models.role')::where('name', '=', 'Patient')->first();
+        foreach ($permissionspatients as $permission) {
+            $roleAdmin->attachPermission($permission);
+        }
     }
 }

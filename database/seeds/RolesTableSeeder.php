@@ -41,12 +41,6 @@ class RolesTableSeeder extends Seeder
                 'level'       => 0,
             ],
             [
-                'name'        => 'Doctor',
-                'slug'        => 'doctor',
-                'description' => 'Doctor Role',
-                'level'       => 0,
-            ],
-            [
                 'name'        => 'Patient',
                 'slug'        => 'patient',
                 'description' => 'Patient Role',

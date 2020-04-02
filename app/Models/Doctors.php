@@ -68,11 +68,11 @@ class Doctors extends Model
      */
     public static $rules = [
         'name' => 'required',
-        'email' => 'required',
+        'email' => 'requiredd',
         'address' => 'required',
         'city' => 'required',
         'state' => 'required',
-        'cep' => 'required',
+        'cep' => 'required||min:8|max:9',
         'specialty_id' => 'required'
     ];
 

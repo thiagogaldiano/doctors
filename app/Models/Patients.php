@@ -66,8 +66,8 @@ class Patients extends Model
         'address' => 'required',
         'city' => 'required',
         'state' => 'required',
-        'cep' => 'required',
-        'phone' => 'required'
+        'cep' => 'required|min:8|max:9',
+        'phone' => 'required|min:11'
     ];
 
 

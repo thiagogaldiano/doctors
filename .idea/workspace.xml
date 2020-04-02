@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5c027de0-4b60-4bd8-90fc-2474c15e53ef" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_27_161751_create_doctors.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_27_161751_create_doctors.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_28_160548_create_schedules.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_160548_create_schedules.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Doctors.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Doctors.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Patients.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Patients.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/doctors/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/doctors/fields.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/patients/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/patients/fields.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +171,7 @@
       <workItem from="1585523848048" duration="6200000" />
       <workItem from="1585769877339" duration="9119000" />
       <workItem from="1585792638019" duration="9856000" />
-      <workItem from="1585826273053" duration="2064000" />
+      <workItem from="1585826273053" duration="3833000" />
     </task>
     <servers />
   </component>

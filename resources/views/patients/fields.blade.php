@@ -31,7 +31,7 @@
 <!-- Cep Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('cep', 'Cep:') !!}
-    {!! Form::text('cep', null, ['class' => 'form-control']) !!}
+    {!! Form::text('cep', null, ['class' => 'form-control','maxlength' => '8']) !!}
 </div>
 
 <!-- Phone Field -->

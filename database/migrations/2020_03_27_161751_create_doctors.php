@@ -21,7 +21,7 @@ class CreateDoctors extends Migration
             $table->string('city');
             $table->string('state');
             $table->string('cep');
-            $table->integer('specialty_id');
+            $table->foreignId('specialty_id');
             $table->timestamps();
         });
     }

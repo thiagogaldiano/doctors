@@ -17,9 +17,9 @@ class CreateSchedules extends Migration
             $table->id();
             $table->dateTime('consultation_date');
             $table->foreignId('patients_id');
-            $table->foreign('patients_id')->references('id')->on('patients');
+            $table->foreign('patients_id')->references('id')->on('patients')->onDelete('cascade');
             $table->foreignId('doctors_id');
-            $table->foreign('doctors_id')->references('id')->on('doctors');
+            $table->foreign('doctors_id')->references('id')->on('doctors')->onDelete('cascade');
             $table->text('descriptions');
             $table->timestamps();
         });

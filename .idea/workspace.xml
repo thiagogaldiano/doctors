@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c027de0-4b60-4bd8-90fc-2474c15e53ef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/doctors.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/doctors.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SchedulesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SchedulesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_27_161751_create_doctors.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_27_161751_create_doctors.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_28_160548_create_schedules.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_160548_create_schedules.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedules/editfields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedules/editfields.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedules/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedules/fields.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/schedules/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedules/table.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +169,7 @@
       <workItem from="1585523848048" duration="6200000" />
       <workItem from="1585769877339" duration="9119000" />
       <workItem from="1585792638019" duration="9856000" />
-      <workItem from="1585826273053" duration="934000" />
+      <workItem from="1585826273053" duration="2064000" />
     </task>
     <servers />
   </component>

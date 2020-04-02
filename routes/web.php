@@ -80,7 +80,9 @@ Route::group(['middleware' => ['verified']], function () {
 
 });
 
+Route::group(['middleware' => ['auth:api']], function () {
+    Route::get('/doctors-json','DoctorsController@json');
+});
 
-Route::get('/doctors-json','DoctorsController@json');
 
 

@@ -15,6 +15,7 @@ use App\Models\Roles;
 use App\Models\RoleUser;
 use App\Models\PermissionRole;
 use App\Models\Users;
+use Illuminate\Support\Arr;
 
 class UsersController extends AppBaseController
 {
@@ -71,6 +72,7 @@ class UsersController extends AppBaseController
                 'name'     => $input['name'],
                 'email'    => $input['email'],
                 'password' => bcrypt($input['password']),
+                'api_token' => \Illuminate\Support\Str::random(60)
             ]);
 
             $newUser->attachRole($role);

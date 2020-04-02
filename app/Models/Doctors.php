@@ -72,7 +72,7 @@ class Doctors extends Model
         'address' => 'required',
         'city' => 'required',
         'state' => 'required',
-        'cep' => 'required||min:8|max:9',
+        'cep' => 'required||max:8',
         'specialty_id' => 'required'
     ];
 

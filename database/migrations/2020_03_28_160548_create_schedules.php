@@ -16,8 +16,10 @@ class CreateSchedules extends Migration
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
             $table->dateTime('consultation_date');
-            $table->integer('patients_id');
-            $table->integer('doctors_id');
+            $table->foreignId('patients_id');
+            $table->foreign('patients_id')->references('id')->on('patients');
+            $table->foreignId('doctors_id');
+            $table->foreign('doctors_id')->references('id')->on('doctors');
             $table->text('descriptions');
             $table->timestamps();
         });

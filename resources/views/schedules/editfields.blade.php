@@ -1,7 +1,7 @@
 <!-- Consultation Date Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('consultation_date', 'Data da consulta:') !!}
-    {!! Form::text('consultation_date', null, ['class' => 'form-control','id'=>'consultation_date']) !!}
+    {!! Form::text('consultation_date', $schedules->consultation_date->format('d/m/Y H:i:s'), ['class' => 'form-control','id'=>'consultation_date']) !!}
 </div>
 
 <!-- Patients Id Field -->
@@ -31,7 +31,7 @@
 @push('scripts')
     <script type="text/javascript">
         $('#consultation_date').datetimepicker({
-            format: 'YYYY-MM-DD HH:mm:ss',
+            format: 'DD/MM/YYYY HH:mm:ss',
             useCurrent: true,
             sideBySide: true
         });

@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c027de0-4b60-4bd8-90fc-2474c15e53ef" name="Default Changelist" comment="" />
+    <list default="true" id="5c027de0-4b60-4bd8-90fc-2474c15e53ef" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/doctors.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/doctors.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SchedulesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SchedulesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_28_160548_create_schedules.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_28_160548_create_schedules.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedules/editfields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedules/editfields.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedules/fields.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedules/fields.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/schedules/table.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/schedules/table.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +28,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -118,6 +137,9 @@
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
       <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
       <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/eklundkristoffer/seedster" />
+      <path value="$PROJECT_DIR$/vendor/laravel/helpers" />
+      <path value="$PROJECT_DIR$/vendor/jeremykenedy/laravel-roles" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Zp6lOwYSZpHAveLzgikhxDgghk" />
@@ -150,13 +172,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="feae7a1c-5251-4b1d-b952-1c9458e2d990" name="Default Changelist" comment="" />
+      <changelist id="5c027de0-4b60-4bd8-90fc-2474c15e53ef" name="Default Changelist" comment="" />
       <created>1585407054402</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585407054402</updated>
       <workItem from="1585407055578" duration="15916000" />
       <workItem from="1585523848048" duration="6200000" />
+      <workItem from="1585769877339" duration="9119000" />
+      <workItem from="1585792638019" duration="9856000" />
+      <workItem from="1585826273053" duration="934000" />
     </task>
     <servers />
   </component>
@@ -168,6 +193,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="449" y="155" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1299.741@67.27.1299.741" timestamp="1585529274563" />
+    <state x="443" y="211" width="537" height="373" key="NewPhpClassDialog" timestamp="1585774051830">
+      <screen x="67" y="27" width="1299" height="741" />
+    </state>
+    <state x="443" y="211" width="537" height="373" key="NewPhpClassDialog/67.27.1299.741@67.27.1299.741" timestamp="1585774051830" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -181,6 +210,11 @@
           <url>file://$PROJECT_DIR$/app/Repositories/PatientsRepository.php</url>
           <line>4</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/UsersController.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -9,6 +9,7 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use App\Models\Schedules;
 
 class SchedulesController extends AppBaseController
 {
@@ -55,10 +56,19 @@ class SchedulesController extends AppBaseController
     public function store(CreateSchedulesRequest $request)
     {
         $input = $request->all();
+        $input['consultation_date'] = implode("-",array_reverse(explode("/",substr($request->consultation_date,0,10)))).' '.substr($request->consultation_date,11,9);
+        $consultation_date_verify_start = date('Y-m-d H', strtotime($input['consultation_date'])).':00:00';
+        $consultation_date_verify_end = date('Y-m-d H', strtotime($input['consultation_date'])).':59:59';
 
-        $schedules = $this->schedulesRepository->create($input);
+        //Verify date schedule
+        $verifyschedule = Schedules::whereBetween('consultation_date',[$consultation_date_verify_start,$consultation_date_verify_end])->where('doctors_id',$request->doctors_id)->count();
 
-        Flash::success('Agendamento cadastrado com sucesso!');
+        if(!$verifyschedule){
+            $schedules = $this->schedulesRepository->create($input);
+            Flash::success('Agendamento cadastrado com sucesso!');
+        }else{
+            Flash::error('Já existe um agendamento nesta hora!');
+        }
 
         return redirect(route('schedules.index'));
     }
@@ -121,9 +131,20 @@ class SchedulesController extends AppBaseController
             return redirect(route('schedules.index'));
         }
 
-        $schedules = $this->schedulesRepository->update($request->all(), $id);
+        $input = $request->all();
+        $input['consultation_date'] = implode("-",array_reverse(explode("/",substr($request->consultation_date,0,10)))).' '.substr($request->consultation_date,11,9);
+        $consultation_date_verify_start = date('Y-m-d H', strtotime($input['consultation_date'])).':00:00';
+        $consultation_date_verify_end = date('Y-m-d H', strtotime($input['consultation_date'])).':59:59';
 
-        Flash::success('Agendamento alterado com sucesso!');
+        //Verify date schedule
+        $verifyschedule = Schedules::whereBetween('consultation_date',[$consultation_date_verify_start,$consultation_date_verify_end])->where('doctors_id',$request->doctors_id)->count();
+
+        if(!$verifyschedule) {
+            $schedules = $this->schedulesRepository->update($input, $id);
+            Flash::success('Agendamento alterado com sucesso!');
+        }else{
+            Flash::error('Já existe um agendamento nesta hora!');
+        }
 
         return redirect(route('schedules.index'));
     }

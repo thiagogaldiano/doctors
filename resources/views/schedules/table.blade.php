@@ -11,7 +11,7 @@
         <tbody>
         @foreach($schedules as $schedules)
             <tr>
-                <td>{{ $schedules->consultation_date }}</td>
+                <td>{{ $schedules->consultation_date->format('d/m/Y H:i:s') }}</td>
                 <td>{{ $schedules->patients->name }}</td>
                 <td>{{ $schedules->doctors->name }}</td>
                 <td>

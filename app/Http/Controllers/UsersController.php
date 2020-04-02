@@ -161,11 +161,19 @@ class UsersController extends AppBaseController
         $user = config('roles.models.defaultUser')::find($id);
         $user->syncRoles($role);
 
-        //$users = $this->usersRepository->update($request->all(), $id);
+        if($request['roles_id'] != 1) {
 
-        Flash::success('Usuário alterado com sucesso!');
+            return redirect()->route('login');
 
-        return redirect(route('users.index'));
+        }else{
+            //$users = $this->usersRepository->update($request->all(), $id);
+
+            Flash::success('Usuário alterado com sucesso!');
+
+            return redirect(route('users.index'));
+        }
+
+
     }
 
     /**

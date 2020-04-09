@@ -13,12 +13,11 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::middleware('auth:api')->get('/doctorsapi', function (Request $request) {
-    Route::get('/doctors-json','DoctorsController@json');
+Route::group(['prefix' => '/v1', 'middleware' => ['auth:api'], 'namespace' => 'Api', 'as' => 'api.'], function () {
+  Route::get('/doctors-json','DoctorsController@json');
 });
 
-Route::prefix('v1')->namespace('API')->group(function () {
+Route::prefix('/v1')->group(function () {
     // Login
     Route::post('/login','AuthController@postLogin');
     // Register
@@ -27,5 +26,9 @@ Route::prefix('v1')->namespace('API')->group(function () {
     Route::middleware('APIToken')->group(function () {
         // Logout
         Route::post('/logout','AuthController@postLogout');
+    });
+    Route::middleware('APIToken')->group(function () {
+        // Logout
+        Route::get('/doctors','AuthController@getDoctors');
     });
 });

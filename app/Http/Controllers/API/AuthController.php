@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers\API;
+use App\Models\Doctors;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use DB;
@@ -103,7 +104,7 @@ class AuthController extends Controller
      */
     public function postLogout(Request $request)
     {
-        $token = $request->header('Authorization');
+        $token = str_replace('Bearer ','',$request->header('Authorization'));
         $user = User::where('api_token',$token)->first();
         if($user) {
             $postArray = ['api_token' => null];
@@ -119,4 +120,19 @@ class AuthController extends Controller
             ]);
         }
     }
+
+    public function getDoctors(Request $request)
+    {
+        $token = str_replace('Bearer ','',$request->header('Authorization'));
+        $user = User::where('api_token',$token)->first();
+        if($user) {
+            $doctors = Doctors::get();
+            return json_encode($doctors);
+        } else {
+            return response()->json([
+                'message' => 'User not found',
+            ]);
+        }
+    }
+
 }

@@ -60,8 +60,15 @@ class UsersController extends AppBaseController
      *
      * @return Response
      */
-    public function store(CreateUsersRequest $request)
+    public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'email|unique:users',
+            'password' => 'required|same:password',
+            'password_confirmation' => 'required|same:password'
+        ]);
+
         $input = $request->all();
 
         $role = config('roles.models.role')::find($input['roles_id']);
@@ -140,8 +147,22 @@ class UsersController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateUsersRequest $request)
+    public function update($id, Request $request)
     {
+        if($request['password']){
+            $request->validate([
+                'name' => 'required',
+                'email' => 'email|unique:users,email,'.$id,
+                'password_confirmation' => 'required|same:password'
+            ]);
+        }else{
+            $request->validate([
+                'name' => 'required',
+                'email' => 'email'
+            ]);
+        }
+
+
         $users = $this->usersRepository->find($id);
 
         if (empty($users)) {

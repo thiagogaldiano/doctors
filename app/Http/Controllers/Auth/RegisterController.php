@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Users;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -64,10 +65,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        if (Users::where('email', '=', $data['email'])->count() === 0) {
+            $role = config('roles.models.role')::find(1);
+            $newUser = config('roles.models.defaultUser')::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+                'api_token' => \Illuminate\Support\Str::random(60)
+            ]);
+            $newUser->attachRole($role);
+
+            return $newUser;
+        }else{
+            Flash::error('E-mail já cadastrado!');
+        }
     }
 }
